@@ -1,17 +1,17 @@
-const arrayHobbies = [
+export const arrayHobbies = [
     {
       name: 'Reading',
       description: 'I love reading sci-fi',
       isActive: true 
     },
     {
-        name: 'Videoganes',
+        name: 'Videogames',
         description: 'Enjoy retro games',
-        isActive: true 
+        isActive: false 
     },
     {
         name: 'Movies',
-        description: 'Thriller and crime genre',
+        description: 'Thriller genre',
         isActive: true 
     },
     {
@@ -19,6 +19,4 @@ const arrayHobbies = [
       description: 'My passion is soccer',
       isActive: false 
     }
-]
-
-export default arrayHobbies;
+];

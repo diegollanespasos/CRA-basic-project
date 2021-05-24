@@ -1,0 +1,12 @@
+.hobbies-container {
+  background-color: snow;
+  width: 281px;
+  padding: 0px 11px;
+  text-align: left;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.hobbie.inactive {
+  color: red;
+}

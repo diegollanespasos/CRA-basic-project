@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import User from './components/User/User';
 import Hobbies from './components/Hobbies/Hobbies';
-import arrayHobbies from './components/Hobbies/Hobbies.data';
+import { arrayHobbies } from './components/Hobbies/Hobbies.data';
 import { countActiveHobbies } from './components/Hobbies/Hobbies.utils';
 
 class App extends React.Component {

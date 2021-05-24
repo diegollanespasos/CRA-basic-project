@@ -1,9 +1,13 @@
+import './Hobbies.css';
+
 const Hobbies = ({ hobbies, showHobbies, count }) => {
     return (
-        <div>
-            <p>{`Count: ${count(hobbies)}`}</p>
+        <div className='hobbies-container'>
+            <h3>{showHobbies ? `Active Hobbies (black) : ${count(hobbies)}` : ''}</h3>
             {
-                showHobbies ? hobbies.map(hobbie => <p>{`${hobbie.name}: ${hobbie.description}`}</p>) : <p>{'Hobbbies not allowed'}</p>
+                showHobbies 
+                ? hobbies.map((hobbie, idx) => <p key={idx} className={`hobbie ${hobbie.isActive ? "" : "inactive"}`}>{`${hobbie.name}: ${hobbie.description}`}</p>) 
+                : <p>{'Hobbies not allowed'}</p>
             }
         </div>
     )
