@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import User from './components/User/User';
+import Hobbies from './components/Hobbies/Hobbies';
+import arrayHobbies from './components/Hobbies/Hobbies.data';
+import { countActiveHobbies } from './components/Hobbies/Hobbies.utils';
 
-function App() {
+class App extends React.Component {
+  render(){
+    return (
+      <div className='App'>
+          <User avatar={<Avatar />} name='Walter White' description='Chemistry Teacher' age={50} />
+          <Hobbies hobbies={arrayHobbies} showHobbies={true} count={countActiveHobbies} />
+      </div>
+    )
+  }
+}
+
+function Avatar () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <img src='https://upload.wikimedia.org/wikipedia/en/0/03/Walter_White_S5B.png' style={avatarStyles} alt='Avatar' />
+  )
+}
+
+const avatarStyles = {
+  borderRadius: '12px',
+  width: '150',
+  height: 'auto',
 }
 
 export default App;
